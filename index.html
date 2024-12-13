@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Voos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="tabs">
+            <button onclick="showSection('nacionais')">Nacionais</button>
+            <button onclick="showSection('internacionais')">Internacionais</button>
+            <button onclick="showSection('promocoes')">Promoções</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Formulário de Busca -->
+        <section id="busca">
+            <h2>Encontre o melhor voo</h2>
+            <div class="search-form">
+                <label for="origin">Origem:</label>
+                <input type="text" id="origin" placeholder="Ex: GRU (São Paulo)">
+
+                <label for="destination">Destino:</label>
+                <input type="text" id="destination" placeholder="Ex: JFK (Nova York)">
+
+                <label for="date">Data de Ida:</label>
+                <input type="date" id="date">
+
+                <label for="return-date">Data de Volta:</label>
+                <input type="date" id="return-date">
+
+                <button onclick="searchFlights()">Buscar</button>
+            </div>
+            <div id="results"></div>
+        </section>
+
+        <!-- Abas -->
+        <section id="nacionais" class="hidden">
+            <h2>Destinos Nacionais</h2>
+            <div class="grid">
+                <img src="gramado.png" alt="Gramado">
+                <img src="salvador.png" alt="Salvador">
+                <img src="rj.png" alt="Rio de Janeiro">
+            </div>
+        </section>
+
+        <section id="internacionais" class="hidden">
+            <h2>Destinos Internacionais</h2>
+            <div class="grid">
+                <img src="norway.png" alt="Noruega">
+                <img src="grindewald.png" alt="Suíça">
+                <img src="ing.png" alt="Reino Unido">
+            </div>
+        </section>
+
+        <section id="promocoes" class="hidden">
+            <h2>Promoções</h2>
+            <p>Aqui você encontrará as melhores promoções para viagens nacionais e internacionais!</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
